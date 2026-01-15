@@ -90,6 +90,7 @@ section = st.sidebar.radio(
         "Budget Scenarios",
         "Email Marketing",
         "Quick Wins"
+
         "Age to Age Campaign"
     ]
 )
@@ -3439,9 +3440,6 @@ elif section == "Quick Wins":
 # ============================================
 # SECTION: AGE TO AGE SINGLE LAUNCH CAMPAIGN
 # ============================================
-# Add "Age to Age Campaign" to the sidebar navigation options list
-# Then add this elif block after the existing sections
-
 elif section == "Age to Age Campaign":
     st.header("🎵 'Age to Age' Single Launch Campaign")
     
