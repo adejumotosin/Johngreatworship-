@@ -149,7 +149,6 @@ if section == "Executive Summary":
         <h4>❌ What's Missing (Critical Gaps)</h4>
         <ul>
         <li>Audience growth strategy</li>
-        <li>Paid advertising (£0 spent confirmed)</li>
         <li>Community engagement</li>
         <li>Playlist placements</li>
         <li>Collaboration with other artists</li>
