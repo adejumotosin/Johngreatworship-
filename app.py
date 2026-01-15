@@ -4306,7 +4306,596 @@ elif section == "Age to Age Campaign":
             
             **£50-100 Recommended Allocation:**
             
-            **Instagram/Facebook Ads (£40-60)
+             **Instagram/Facebook Ads (£40-60):**
+            - Day 2-3: Boost best-performing launch post
+            - Day 4-5: Run Story ads with music snippet
+            - Day 6-7: Retarget engaged users
+            - Target: UK, 18-45, Gospel/Worship interests
+            
+            **TikTok Promote (£20-30):**
+            - Boost best-performing video
+            - Target gospel music viewers
+            
+            **Playlist Pitching (£10-20):**
+            - SubmitHub campaigns
+            - Direct curator outreach
+            
+            **Expected Results:**
+            - 500-1,000 additional impressions
+            - 50-100 new listeners
+            - 2-3 playlist placements
+            """)
+        
+        st.markdown("---")
+        
+        # Week 1 projection chart
+        days = ['Launch', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6', 'Day 7']
+        daily_streams = [600, 250, 200, 175, 125, 125, 175]
+        cumulative = [600, 850, 1050, 1225, 1350, 1475, 1650]
+        
+        fig = go.Figure()
+        
+        fig.add_trace(go.Bar(
+            x=days,
+            y=daily_streams,
+            name='Daily Streams',
+            marker_color='#8B4789',
+            text=daily_streams,
+            textposition='outside'
+        ))
+        
+        fig.add_trace(go.Scatter(
+            x=days,
+            y=cumulative,
+            name='Cumulative Total',
+            mode='lines+markers',
+            line=dict(color='#28a745', width=3),
+            marker=dict(size=10),
+            yaxis='y2'
+        ))
+        
+        fig.update_layout(
+            title="Week 1 Stream Projection",
+            xaxis_title="Day",
+            yaxis_title="Daily Streams",
+            yaxis2=dict(
+                title="Cumulative Total",
+                overlaying='y',
+                side='right'
+            ),
+            height=400,
+            hovermode='x unified'
+        )
+        
+        st.plotly_chart(fig, use_container_width=True)
+    
+    # Content Calendar
+    with campaign_tabs[3]:
+        st.subheader("📱 Complete Content Calendar")
+        
+        st.markdown("""
+        <div class="insight-box">
+        <h4>📅 30-Day Post-Launch Content Strategy</h4>
+        <p>Sustain momentum beyond Week 1 with strategic content repurposing and continued engagement</p>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        # 30-day content calendar
+        calendar_data = {
+            'Week': ['Week 1 (Jan 18-24)', 'Week 2 (Jan 25-31)', 'Week 3 (Feb 1-7)', 'Week 4 (Feb 8-14)'],
+            'Instagram': [
+                '7 Reels (launch, BTS, lyrics, testimonies), 40+ Stories',
+                '7 Reels (acoustic, cover challenge, fan reactions), 30+ Stories',
+                '7 Reels (worship moments, Scripture connections), 30+ Stories',
+                '5 Reels (milestone celebration, looking ahead), 20+ Stories'
+            ],
+            'TikTok': [
+                '10-14 videos (launch, reactions, duets, trending sounds)',
+                '7-10 videos (challenges, POVs, worship moments)',
+                '7-10 videos (user-generated content, collaborations)',
+                '5-7 videos (recap, thank you, next chapter tease)'
+            ],
+            'Email': [
+                '3 emails (launch, Day 3 update, Week 1 thank you)',
+                '2 emails (exclusive content, playlist update)',
+                '1-2 emails (testimony collection, milestone)',
+                '1 email (30-day reflection, what\'s next)'
+            ],
+            'YouTube': [
+                '1 main video (music video or lyric video), 5-7 Shorts',
+                '3-5 Shorts (repurposed TikTok content)',
+                '1 video (acoustic/BTS), 3-5 Shorts',
+                '3-5 Shorts, plan next main video'
+            ]
+        }
+        
+        df_calendar = pd.DataFrame(calendar_data)
+        st.dataframe(df_calendar, use_container_width=True, hide_index=True)
+        
+        st.markdown("---")
+        
+        # Content repurposing guide
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            st.markdown("""
+            **Content Repurposing Matrix:**
+            
+            **From 1 Music Video → 20+ Pieces:**
+            
+            **Video Content (10):**
+            - 1 Full YouTube video
+            - 3 YouTube Shorts (different moments)
+            - 3 Instagram Reels (vertical crop)
+            - 3 TikTok videos (trending formats)
+            
+            **Image Content (5):**
+            - 3 Quote graphics (lyrics)
+            - 1 Instagram carousel (photos)
+            - 1 Cover art variations
+            
+            **Story Content (5):**
+            - Behind-the-scenes photos
+            - Screenshot testimonies
+            - Lyrics slides
+            - Stream milestone graphics
+            - Personal messages
+            """)
+        
+        with col2:
+            st.markdown("""
+            **Weekly Content Themes:**
+            
+            **Week 1: Launch & Gratitude**
+            - Theme: "It's here! Thank you!"
+            - Focus: Streaming, saving, sharing
+            - Tone: Excitement, celebration
+            
+            **Week 2: Depth & Connection**
+            - Theme: "The story behind the song"
+            - Focus: Meaning, testimony, Scripture
+            - Tone: Intimate, reflective
+            
+            **Week 3: Community & Collaboration**
+            - Theme: "Your Age to Age stories"
+            - Focus: User content, testimonies
+            - Tone: Communal, inspiring
+            
+            **Week 4: Momentum & Forward**
+            - Theme: "What's next?"
+            - Focus: Milestone celebration, future
+            - Tone: Grateful, anticipatory
+            """)
+    
+    # Budget Allocation
+    with campaign_tabs[4]:
+        st.subheader("💰 Campaign Budget Allocation")
+        
+        # Budget scenario comparison
+        budget_scenarios = {
+            'Investment Level': ['Conservative (Organic)', 'Entry (£100)', 'Standard (£200)', 'Growth (£400)'],
+            'Pre-Launch': ['£0', '£30', '£60', '£120'],
+            'Launch Day': ['£0', '£30', '£60', '£120'],
+            'Week 1': ['£0', '£40', '£80', '£160'],
+            'Total': ['£0', '£100', '£200', '£400'],
+            'Expected Day 1 Streams': ['300-500', '500-800', '800-1,200', '1,200-2,000'],
+            'Expected Week 1 Total': ['1,000-1,500', '1,500-2,500', '2,500-4,000', '4,000-6,000']
+        }
+        
+        df_budget_scenarios = pd.DataFrame(budget_scenarios)
+        st.dataframe(df_budget_scenarios, use_container_width=True, hide_index=True)
+        
+        st.markdown("---")
+        
+        # Recommended £100 budget breakdown
+        st.markdown("**Recommended Budget Breakdown (£100 Total):**")
+        
+        detailed_budget = {
+            'Phase': [
+                'Pre-Launch (£30)',
+                'Pre-Launch (£30)',
+                'Launch Day (£30)',
+                'Launch Day (£30)',
+                'Week 1 (£40)',
+                'Week 1 (£40)'
+            ],
+            'Channel': [
+                'Instagram Story Ads',
+                'Facebook Group Targeting',
+                'Instagram Reels Boost',
+                'TikTok Promote',
+                'Retargeting Campaigns',
+                'Playlist Pitching (SubmitHub)'
+            ],
+            'Budget': ['£20', '£10', '£20', '£10', '£30', '£10'],
+            'Goal': [
+                '30-50 pre-saves',
+                '20-30 email signups',
+                '200-300 Day 1 streams',
+                '100-200 Day 1 streams',
+                'Sustained Week 1 momentum',
+                '2-3 playlist placements'
+            ],
+            'Timing': [
+                'Jan 15-17 (3 days)',
+                'Jan 15-17 (3 days)',
+                'Jan 18 only',
+                'Jan 18-19',
+                'Jan 19-24',
+                'Jan 18-24'
+            ]
+        }
+        
+        df_detailed = pd.DataFrame(detailed_budget)
+        st.dataframe(df_detailed, use_container_width=True, hide_index=True)
+        
+        st.markdown("""
+        <div class="action-box">
+        <h4>✅ Budget Allocation Rationale</h4>
+        <p><strong>Why This Distribution:</strong></p>
+        <ul>
+        <li><strong>30% Pre-Launch:</strong> Build anticipation and pre-saves (critical for Day 1)</li>
+        <li><strong>30% Launch Day:</strong> Maximize Day 1 streams (algorithm trigger)</li>
+        <li><strong>40% Week 1:</strong> Sustain momentum when organic reach drops</li>
+        </ul>
+        <p><strong>Expected ROI:</strong></p>
+        <ul>
+        <li>£100 investment → 1,500-2,500 streams</li>
+        <li>Cost per stream: £0.04-0.07</li>
+        <li>Revenue: £6-10 (streaming royalties)</li>
+        <li>Financial ROI: -90% to -94% (expected for single launch)</li>
+        <li><strong>Strategic ROI:</strong> Algorithm activation, playlist placement, audience growth (invaluable)</li>
+        </ul>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    # Success Metrics
+    with campaign_tabs[5]:
+        st.subheader("📊 Success Metrics & KPIs")
+        
+        st.markdown("""
+        <div class="metric-card">
+        <h3>🎯 PRIMARY SUCCESS METRIC</h3>
+        <p><strong>Day 1 Streams: 500+ to trigger Spotify Release Radar</strong></p>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        st.markdown("---")
+        
+        # Tiered success framework
+        success_tiers = {
+            'Metric': [
+                'Day 1 Streams',
+                'Day 1 Saves',
+                'Week 1 Total Streams',
+                'Playlist Placements (Week 1)',
+                'Email List Growth',
+                'Social Media Engagement',
+                'Pre-Saves Secured'
+            ],
+            'Minimum Success': [
+                '300-500',
+                '50-100',
+                '1,000-1,500',
+                '1-2',
+                '30-50',
+                '100-200 interactions',
+                '30-50'
+            ],
+            'Target Success': [
+                '500-800',
+                '100-150',
+                '1,500-2,500',
+                '3-5',
+                '50-100',
+                '200-400 interactions',
+                '50-80'
+            ],
+            'Exceptional Success': [
+                '800+',
+                '150+',
+                '2,500+',
+                '5+',
+                '100+',
+                '400+ interactions',
+                '80+'
+            ]
+        }
+        
+        df_success = pd.DataFrame(success_tiers)
+        st.dataframe(df_success, use_container_width=True, hide_index=True)
+        
+        st.markdown("---")
+        
+        # Platform-specific KPIs
+        platform_kpis = st.tabs(["Spotify", "Instagram", "TikTok", "Email", "YouTube"])
+        
+        with platform_kpis[0]:
+            st.markdown("""
+            **Spotify Success Metrics:**
+            
+            **Day 1:**
+            - 500+ streams (triggers Release Radar)
+            - 100+ saves (signals engagement)
+            - 50+ playlist adds (user playlists)
+            - Sub-50% skip rate (quality signal)
+            
+            **Week 1:**
+            - 1,500+ total streams
+            - Added to 3-5 independent playlists
+            - 200+ unique listeners
+            - Appears in Release Radar for followers
+            
+            **Month 1:**
+            - 5,000+ total streams
+            - 5-10 playlist placements
+            - 500+ unique listeners
+            - Discover Weekly consideration
+            
+            **Why It Matters:**
+            - Release Radar = automatic exposure to your followers
+            - Discover Weekly = exponential growth potential
+            - Playlist placements = sustained streams
+            - Saves > Streams in algorithm weight
+            """)
+        
+        with platform_kpis[1]:
+            st.markdown("""
+            **Instagram Success Metrics:**
+            
+            **Launch Week:**
+            - Launch post: 100+ likes, 20+ comments
+            - Reels: 500-1,000+ views each
+            - Stories: 30-50% completion rate
+            - 20-30 new followers
+            - Profile visits: 200-400
+            
+            **Engagement Rate Target:**
+            - Overall: 10-15%
+            - Reels: 15-20%
+            - Stories: Poll responses, questions answered
+            
+            **Content Performance:**
+            - 2-3 Reels hit 1,000+ views
+            - Story retention above 40%
+            - Share rate: 5-10% of reach
+            
+            **Why It Matters:**
+            - Algorithm favors high engagement
+            - Reels = discovery mechanism
+            - Stories = community building
+            - Profile visits = potential conversions
+            """)
+        
+        with platform_kpis[2]:
+            st.markdown("""
+            **TikTok Success Metrics:**
+            
+            **Launch Week Goals:**
+            - 1 video hits 10,000+ views
+            - Average 500-1,000 views per video
+            - 20-50 new followers
+            - 50+ comments across videos
+            - 5-10 duets/stitches
+            
+            **Viral Potential Indicators:**
+            - 10%+ engagement rate (likes + comments ÷ views)
+            - Watch time above 60%
+            - Share rate above 2%
+            - For You Page (FYP) exposure
+            
+            **Week 1 Strategy:**
+            - Post 10-14 videos
+            - Test different formats
+            - Engage with gospel music community
+            - Participate in trending sounds
+            
+            **Why It Matters:**
+            - TikTok = highest discovery potential
+            - One viral video = career changer
+            - Gospel music community very active
+            - Direct link to streaming
+            """)
+        
+        with platform_kpis[3]:
+            st.markdown("""
+            **Email List Success Metrics:**
+            
+            **Pre-Launch (3 days):**
+            - 30-50 new subscribers
+            - Lead magnet: 40%+ opt-in rate
+            - Welcome sequence: 50%+ open rate
+            
+            **Launch Day:**
+            - Launch email: 40-50% open rate
+            - Click-through: 30-40%
+            - Conversion to stream: 20-30%
+            
+            **Week 1:**
+            - 50-100 total subscribers
+            - Email 2-3 times
+            - Maintain 30%+ open rate
+            - Build relationship
+            
+            **Why It Matters:**
+            - Only owned audience channel
+            - Highest conversion to streams
+            - Not algorithm-dependent
+            - Foundation for future releases
+            - Email subscribers = true fans
+            """)
+        
+        with platform_kpis[4]:
+            st.markdown("""
+            **YouTube Success Metrics:**
+            
+            **Music Video/Lyric Video:**
+            - Week 1: 500-1,000 views
+            - Watch time: 60%+ average
+            - Likes: 50-100
+            - Comments: 20-40
+            - Subscribers: +10-20
+            
+            **YouTube Shorts:**
+            - 5-7 Shorts in Week 1
+            - Average 500-1,000 views each
+            - 1-2 hit 2,000+ views
+            - Drives traffic to main video
+            
+            **Conversion Metrics:**
+            - 5-10% click pinned comment (Spotify link)
+            - End screen clicks: 3-5%
+            - Description link clicks: 2-3%
+            
+            **Why It Matters:**
+            - Second-largest music platform
+            - SEO value for discovery
+            - Long-term evergreen views
+            - Monetization potential (future)
+            - Converts well to Spotify
+            """)
+        
+        st.markdown("---")
+        
+        # Success tracking dashboard
+        st.markdown("**Real-Time Success Tracking Checklist:**")
+        
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            st.markdown("""
+            **Daily Metrics to Track:**
+            
+            ✅ **Spotify for Artists:**
+            - Streams (today, yesterday, total)
+            - Saves
+            - Playlist additions
+            - Listener count
+            - Geographic data
+            
+            ✅ **Instagram Insights:**
+            - Reach (today, 7 days)
+            - Engagement rate
+            - Profile visits
+            - Link taps
+            - Follower growth
+            
+            ✅ **TikTok Analytics:**
+            - Video views
+            - Profile views
+            - Follower growth
+            - Engagement rate
+            """)
+        
+        with col2:
+            st.markdown("""
+            **Weekly Review Metrics:**
+            
+            ✅ **Overall Performance:**
+            - Total streams (all platforms)
+            - Total engagement (all social)
+            - Email list growth
+            - Playlist placements
+            
+            ✅ **Content Analysis:**
+            - Top 3 performing posts
+            - Worst performing (learn why)
+            - Engagement patterns
+            - Audience demographics
+            
+            ✅ **Strategic Adjustments:**
+            - What's working? (Do more)
+            - What's not? (Stop/pivot)
+            - New opportunities identified
+            - Week 2 plan adjustments
+            """)
+        
+        st.markdown("""
+        <div class="success-box">
+        <h4>🎉 Campaign Success Definition</h4>
+        <p><strong>The campaign is successful if we achieve:</strong></p>
+        <ol>
+        <li><strong>PRIMARY:</strong> 500+ Day 1 streams (Spotify algorithm trigger) ✅</li>
+        <li><strong>SECONDARY:</strong> 1,500+ Week 1 total streams ✅</li>
+        <li><strong>TERTIARY:</strong> 50+ email subscribers (owned audience foundation) ✅</li>
+        <li><strong>BONUS:</strong> 1+ viral social media moment (10K+ views) 🎯</li>
+        </ol>
+        <p><strong>Success Mindset:</strong> Every stream matters. Every save counts. Every share helps. 
+        This is about building momentum that carries beyond Week 1 into sustainable growth.</p>
+        <p><strong>Remember:</strong> Most independent artists get 50-200 Day 1 streams. Hitting 500+ puts 
+        JohnGreat in the top 10% of independent gospel releases.</p>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    st.markdown("---")
+    
+    # Final Campaign Summary
+    st.subheader("📋 Campaign Summary & Action Steps")
+    
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        st.markdown("""
+        **Immediate Actions (Next 24 Hours):**
+        
+        ✅ **Set Up Infrastructure:**
+        - [ ] Update Linktree with pre-save link
+        - [ ] Create email list opt-in (Mailchimp)
+        - [ ] Design lead magnet PDF
+        - [ ] Prepare all countdown content
+        - [ ] Schedule Day -3 posts
+        
+        ✅ **Content Preparation:**
+        - [ ] Design campaign graphics (Canva)
+        - [ ] Edit 10+ TikTok videos
+        - [ ] Create 7+ Instagram Reels
+        - [ ] Write all email copy
+        - [ ] Prepare launch day content
+        
+        ✅ **Community Outreach:**
+        - [ ] DM 20 gospel artists for support
+        - [ ] Post in 5 Facebook groups
+        - [ ] Engage with gospel community
+        - [ ] Build anticipation
+        """)
+    
+    with col2:
+        st.markdown("""
+        **Campaign Resources Needed:**
+        
+        **Design Assets:**
+        - Cover art (high-res)
+        - Campaign graphics template
+        - Story templates
+        - Quote graphics (3-5)
+        
+        **Content:**
+        - Music video or lyric video
+        - Behind-the-scenes footage
+        - Studio photos
+        - Acoustic clips
+        
+        **Copy:**
+        - Captions for all platforms
+        - Email sequences (3-5)
+        - Story text overlays
+        - Pinned comments template
+        
+        **Tools:**
+        - Canva (graphics)
+        - CapCut (video editing)
+        - Mailchimp (email)
+        - Later/Buffer (scheduling)
+        """)
+    
+    st.markdown("""
+    <div class="action-box">
+    <h4>🚀 Final Campaign Mantra</h4>
+    <p><strong>"Age to Age" is more than a single release. It's the foundation of JohnGreat's growth story.</strong></p>
+    <p>Every action in this campaign builds toward one goal: <strong>Sustainable momentum.</strong></p>
+    <p><strong>The 3-Day Countdown starts NOW. Let's make history.</strong></p>
+    </div>
+    """, unsafe_allow_html=True)
 # Footer
 st.markdown("---")
 st.markdown("**Strategic Audit & Growth Plan** • Prepared by Oluwatosin Adejumo • © 2026")
