@@ -2146,84 +2146,112 @@ elif section == "Content Strategy":
         """)
 
 # ============================================
-# SECTION 8: BUDGET SCENARIOS
+# SECTION 8: BUDGET SCENARIOS (IMPROVED)
 # ============================================
 elif section == "Budget Scenarios":
-    st.header("VIII. Budget Scenarios & ROI Analysis")
+    st.header("VIII. Budget Scenarios & Investment Analysis")
     
     st.markdown("""
     <div class="insight-box">
-    <h4>💰 Financial Reality Check</h4>
-    <p><strong>Important:</strong> Monetary ROI will be negative in first 90 days. This is NORMAL for artist development.</p>
-    <p>Focus on <strong>STRATEGIC ROI</strong> (audience building, systems, career foundation).</p>
+    <h4>💰 Investment Framework</h4>
+    <p>This analysis presents four strategic investment scenarios for audience development. Each scenario reflects 
+    different resource allocation approaches, from organic growth to accelerated market penetration.</p>
+    <p><strong>Key Principle:</strong> Initial investment focuses on building sustainable growth infrastructure 
+    rather than immediate financial returns. Success metrics prioritize audience engagement and platform algorithm activation.</p>
     </div>
     """, unsafe_allow_html=True)
     
     # Budget Scenario Tabs
-    budget_tabs = st.tabs(["£0 Budget", "£50/Month", "£100/Month", "£200/Month"])
+    budget_tabs = st.tabs(["Conservative Estimate", "Entry Investment", "Standard Investment", "Growth Investment"])
     
-    # £0 Budget
+    # Conservative Estimate (formerly £0)
     with budget_tabs[0]:
-        st.subheader("Scenario A: £0 Budget (Organic Only)")
+        st.subheader("Scenario A: Conservative Estimate (Organic Growth Strategy)")
         
         col1, col2 = st.columns(2)
         
         with col1:
             st.markdown("""
-            **Strategy:**
-            - Community engagement focus
-            - Collaboration over advertising
-            - Time investment over money
+            **Strategic Approach:**
+            - Community-focused engagement
+            - Strategic collaboration partnerships
+            - Time-intensive content optimization
+            - Platform algorithm understanding
             
-            **Daily Time: 1-2 hours**
-            - 30 min: Content creation (phone only)
-            - 30 min: Community engagement
-            - 30 min: Collaboration outreach
-            - 30 min: Analytics & planning
+            **Resource Allocation:**
+            - **Time Investment:** 90-120 minutes daily
+            - **Content Creation:** 30-45 minutes
+            - **Community Engagement:** 30-40 minutes
+            - **Collaboration Development:** 20-25 minutes
+            - **Analytics & Strategy:** 10-15 minutes
             """)
         
         with col2:
             st.markdown("""
-            **90-Day Expectations:**
+            **90-Day Projections:**
             
-            **Growth (Conservative):**
-            - Spotify: 2 → 50-100 listeners
-            - Instagram: 33 → 100-150 followers
-            - TikTok: 1 → 100-200 followers
-            - Email: 0 → 30-50 subscribers
+            **Expected Growth Metrics:**
+            - Spotify Monthly Listeners: 50-100 (+2,400% to +4,900%)
+            - Instagram Followers: 100-150 (+200% to +350%)
+            - TikTok Followers: 100-200 (+9,900% to +19,900%)
+            - Email Subscribers: 30-50 (new channel)
+            - Total Audience Reach: 280-500
             
-            **Challenges:**
-            - Slow growth (frustration risk)
-            - Algorithm dependency
-            - High time investment
-            - Burnout potential
+            **Growth Velocity:**
+            - Timeline to 500 listeners: 6-12 months
+            - Requires consistent daily execution
+            - Platform algorithm dependency high
             """)
         
         st.markdown("""
         <div class="action-box">
-        <h4>✅ £0 Budget Success Formula</h4>
-        <p><strong>Focus Areas:</strong></p>
+        <h4>✅ Success Factors for Organic Growth</h4>
+        <p><strong>Critical Success Elements:</strong></p>
         <ol>
-        <li><strong>Community First:</strong> Build genuine relationships with other gospel artists</li>
-        <li><strong>Collaboration Heavy:</strong> Features on other artists' songs = access to their audience</li>
-        <li><strong>Content Repurposing:</strong> Maximize every piece of content (1 → 10 pieces)</li>
-        <li><strong>Platform Optimization:</strong> Perfect profile, SEO, CTAs (free but crucial)</li>
-        <li><strong>Consistency Over Quality:</strong> Post daily even if not perfect</li>
+        <li><strong>Community Integration:</strong> Build authentic relationships within gospel music ecosystem</li>
+        <li><strong>Collaboration Strategy:</strong> Leverage features and cross-promotion for audience access</li>
+        <li><strong>Content Excellence:</strong> Maximize every asset through strategic repurposing (1→10 pieces)</li>
+        <li><strong>Platform Mastery:</strong> Optimize profiles, SEO, and conversion pathways at no cost</li>
+        <li><strong>Consistency Protocol:</strong> Daily posting schedule regardless of immediate results</li>
         </ol>
-        <p><strong>Timeline:</strong> 6-12 months to reach 500 listeners (realistic expectation)</p>
+        <p><strong>Ideal Application:</strong> Artists prioritizing long-term community building with flexible timelines 
+        and significant time availability for hands-on engagement.</p>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        st.markdown("""
+        <div class="risk-box">
+        <h4>⚠️ Considerations & Limitations</h4>
+        <ul>
+        <li><strong>Extended Timeline:</strong> Achieving critical mass (500+ listeners) typically requires 6-12 months</li>
+        <li><strong>Algorithm Constraints:</strong> Organic reach averages 5-10% of follower base on major platforms</li>
+        <li><strong>Time Intensity:</strong> Requires sustained 90-120 minute daily commitment without guarantee of results</li>
+        <li><strong>Momentum Risk:</strong> Slower growth can impact motivation and content consistency</li>
+        <li><strong>Competitive Disadvantage:</strong> Artists using paid promotion gain faster algorithmic favor</li>
+        </ul>
         </div>
         """, unsafe_allow_html=True)
     
-    # £50/Month Budget
+    # Entry Investment (£50/Month)
     with budget_tabs[1]:
-        st.subheader("Scenario B: £50/Month Budget (Recommended Minimum)")
+        st.subheader("Scenario B: Entry Investment (£50/Month)")
         
         # Budget Allocation
         budget_data = {
-            'Platform': ['Instagram Reels Ads', 'Facebook Ads', 'Tools/Software', 'Total'],
-            'Amount': ['£30', '£20', '£0 (free tools)', '£50'],
-            'Purpose': ['Music video promotion', 'Gospel group targeting', 'Content creation', 'Monthly total'],
-            'Expected Results': ['20-30 new followers, 10-15 listeners', '10-15 new followers, 5-10 listeners', 'Efficiency gains', '30-50 new followers, 15-25 listeners']
+            'Channel': ['Instagram Promotion', 'Facebook Targeted Ads', 'Platform Tools', 'Monthly Total'],
+            'Allocation': ['£30', '£20', '£0', '£50'],
+            'Strategic Purpose': [
+                'Music video and Reel amplification',
+                'Gospel community targeting and group reach',
+                'Utilize free-tier scheduling and analytics tools',
+                'Baseline digital marketing investment'
+            ],
+            'Expected Monthly Impact': [
+                '20-30 followers | 10-15 listeners',
+                '10-15 followers | 5-10 listeners',
+                'Improved workflow efficiency',
+                '30-50 followers | 15-25 listeners'
+            ]
         }
         
         df_budget50 = pd.DataFrame(budget_data)
@@ -2235,84 +2263,91 @@ elif section == "Budget Scenarios":
         
         with col1:
             st.markdown("""
-            **90-Day Investment: £150**
+            **Investment Analysis:**
             
-            **Expected Returns:**
-            - **Followers:** 90-150 new (across platforms)
-            - **Listeners:** 45-75 new (Spotify monthly)
-            - **Email:** 45-60 new subscribers
-            - **Streams:** 4,500-7,500 additional
+            **90-Day Financial Overview:**
+            - Total Investment: £150
+            - Projected Streaming Revenue: £18-30
+            - Net Position: -£120 to -£132
+            - Initial ROI: -80% to -88%
             
-            **Monetary ROI:**
-            - Investment: £150
-            - Revenue: £18-30 (streaming)
-            - Net: -£120 to -£132
-            - ROI: -80% to -88%
+            **Expected Audience Growth:**
+            - New Followers: 90-150 (cross-platform)
+            - New Listeners: 45-75 (Spotify)
+            - Email Subscribers: 45-60
+            - Additional Streams: 4,500-7,500
             """)
         
         with col2:
             st.markdown("""
-            **Strategic ROI:**
+            **Strategic Value Analysis:**
             
-            **What £150 Buys:**
-            1. **Algorithm Attention:** 45-75 listeners = Spotify starts recommending
-            2. **Social Proof:** 90-150 followers = people follow active accounts
-            3. **Playlist Consideration:** Curators notice growing numbers
-            4. **Momentum:** Growth begets growth
-            5. **Time Efficiency:** Faster results = less burnout
+            **Infrastructure Development:**
+            1. **Algorithm Activation:** 45-75 listeners triggers Spotify recommendation systems
+            2. **Social Validation:** 90-150 followers establishes credibility for organic discovery
+            3. **Curator Visibility:** Growth metrics attract playlist consideration
+            4. **Momentum Generation:** Results compound through increased algorithmic favor
+            5. **Efficiency Gains:** Accelerated learning reduces long-term time investment
             
-            **Compared to £0:**
-            - 3-5x faster growth
-            - Higher morale (seeing results)
-            - Better algorithm treatment
-            - More collaboration opportunities
+            **Comparative Advantage:**
+            - 3-5x faster growth versus organic approach
+            - Improved team morale through visible progress
+            - Enhanced algorithmic treatment across platforms
+            - Increased collaboration opportunities
             """)
         
         st.markdown("""
         <div class="success-box">
-        <h4>🎯 Why £50/Month is Recommended Minimum</h4>
-        <p>For emerging artists, £50/month is the <strong>"minimum viable investment"</strong> to:</p>
+        <h4>🎯 Strategic Rationale: Entry Investment Level</h4>
+        <p>The £50 monthly investment represents the <strong>minimum viable marketing budget</strong> for emerging artists to:</p>
         <ul>
-        <li>Overcome algorithm suppression (organic reach is 5-10% of followers)</li>
-        <li>Get in front of targeted audience (gospel music fans in UK)</li>
-        <li>Build social proof (people follow accounts that look active/popular)</li>
-        <li>Maintain motivation (seeing growth encourages consistency)</li>
+        <li><strong>Overcome Platform Barriers:</strong> Organic reach averages 5-10% of followers; paid promotion ensures targeted visibility</li>
+        <li><strong>Access Target Demographics:</strong> Precision targeting of gospel music enthusiasts in UK market</li>
+        <li><strong>Build Social Proof:</strong> Growth metrics attract additional organic followers (network effects)</li>
+        <li><strong>Maintain Momentum:</strong> Visible progress supports consistent content creation and team motivation</li>
+        <li><strong>Accelerate Learning:</strong> Faster feedback loops enable strategy optimization</li>
         </ul>
-        <p><strong>Reality:</strong> Beautiful content with zero promotion = shouting into the void.</p>
+        <p><strong>Industry Context:</strong> Professional content without strategic promotion yields minimal results. 
+        This investment level balances budget constraints with growth requirements.</p>
         </div>
         """, unsafe_allow_html=True)
     
-    # £100/Month Budget
+    # Standard Investment (£100/Month)
     with budget_tabs[2]:
-        st.subheader("Scenario C: £100/Month Budget (Realistic Growth)")
+        st.subheader("Scenario C: Standard Investment (£100/Month)")
         
-        # Budget Allocation Pie Chart
-        labels = ['Instagram Ads', 'TikTok Promote', 'YouTube Ads', 'Retargeting']
+        # Budget Allocation Visualization
+        labels = ['Instagram Advertising', 'TikTok Promotion', 'YouTube Advertising', 'Retargeting Campaigns']
         values = [40, 30, 20, 10]
         
         fig = go.Figure(data=[go.Pie(
             labels=labels,
             values=values,
             hole=0.4,
-            marker=dict(colors=['#8B4789', '#D4A574', '#17a2b8', '#28a745'])
+            marker=dict(colors=['#8B4789', '#D4A574', '#17a2b8', '#28a745']),
+            textinfo='label+percent',
+            textposition='outside'
         )])
         
         fig.update_layout(
-            title="£100/Month Budget Allocation",
-            height=400
+            title="£100 Monthly Budget Allocation Strategy",
+            height=400,
+            showlegend=True
         )
         
         st.plotly_chart(fig, use_container_width=True)
         
         st.markdown("---")
         
-        # Expected Results
+        # Detailed Channel Performance
         results_data = {
-            'Metric': ['Impressions', 'Profile Visits', 'New Followers', 'New Listeners', 'Cost Per Result'],
-            'Instagram (£40)': ['2,000-3,000', '80-120', '30-40', '15-20', '£1.00-1.33'],
-            'TikTok (£30)': ['5,000-10,000', '150-250', '40-60', '20-30', '£0.50-0.75'],
-            'YouTube (£20)': ['1,000-2,000', '30-50', '10-15', '5-10', '£2.00-4.00'],
-            'Total (£100)': ['8,000-15,000', '260-420', '80-115', '40-60', '£0.87-1.25']
+            'Marketing Channel': ['Instagram', 'TikTok', 'YouTube', 'Retargeting', 'Combined Total'],
+            'Budget': ['£40', '£30', '£20', '£10', '£100'],
+            'Projected Impressions': ['2,000-3,000', '5,000-10,000', '1,000-2,000', '500-1,000', '8,500-16,000'],
+            'Profile Visits': ['80-120', '150-250', '30-50', '20-30', '280-450'],
+            'New Followers': ['30-40', '40-60', '10-15', '5-10', '85-125'],
+            'New Listeners': ['15-20', '20-30', '5-10', '3-5', '43-65'],
+            'Cost Per Acquisition': ['£1.00-1.33', '£0.50-0.75', '£2.00-4.00', '£2.00-3.33', '£0.80-1.16']
         }
         
         df_results100 = pd.DataFrame(results_data)
@@ -2320,52 +2355,57 @@ elif section == "Budget Scenarios":
         
         st.markdown("""
         <div class="action-box">
-        <h4>📈 £100/Month 90-Day Projection</h4>
+        <h4>📈 90-Day Investment Projection</h4>
         <p><strong>Total Investment:</strong> £300</p>
-        <p><strong>Expected 90-Day Results:</strong></p>
+        <p><strong>Projected 90-Day Outcomes:</strong></p>
         <ul>
-        <li><strong>Followers:</strong> 240-345 new (across platforms)</li>
-        <li><strong>Listeners:</strong> 120-180 new (Spotify monthly)</li>
-        <li><strong>Email Subscribers:</strong> 60-90 new</li>
-        <li><strong>Additional Streams:</strong> 12,000-18,000</li>
+        <li><strong>Audience Growth:</strong> 255-375 new followers (cross-platform aggregate)</li>
+        <li><strong>Listener Acquisition:</strong> 129-195 new monthly listeners (Spotify)</li>
+        <li><strong>Email List Development:</strong> 60-90 subscribers</li>
+        <li><strong>Streaming Activity:</strong> 12,000-18,000 additional streams</li>
+        <li><strong>Market Penetration:</strong> 25,500-48,000 targeted impressions</li>
         </ul>
-        <p><strong>End of 90 Days:</strong></p>
+        <p><strong>End-State Metrics (Day 90):</strong></p>
         <ul>
-        <li>Spotify: 120-180 monthly listeners</li>
-        <li>Instagram: 270-380 followers</li>
-        <li>TikTok: 240-350 followers</li>
-        <li>Email: 60-90 subscribers</li>
+        <li>Spotify Monthly Listeners: 131-197 (target: achieve 50% of 500-listener goal)</li>
+        <li>Instagram Followers: 288-408</li>
+        <li>TikTok Followers: 256-376</li>
+        <li>Email Subscribers: 60-90</li>
         </ul>
-        <p><strong>Verdict:</strong> Strong foundation for sustainable growth into Year 2.</p>
+        <p><strong>Strategic Assessment:</strong> Establishes strong foundation for sustainable growth trajectory into subsequent quarters. 
+        Algorithm engagement achieved across major platforms.</p>
         </div>
         """, unsafe_allow_html=True)
     
-    # £200/Month Budget
+    # Growth Investment (£200/Month)
     with budget_tabs[3]:
-        st.subheader("Scenario D: £200/Month Budget (Aggressive Growth)")
+        st.subheader("Scenario D: Growth Investment (£200/Month)")
         
         st.markdown("""
         <div class="success-box">
-        <h4>⚡ Aggressive Growth Scenario</h4>
-        <p>For artists ready to invest seriously in music career. Assumes:</p>
-        <ul>
-        <li>Music is primary focus (not hobby)</li>
-        <li>Willing to invest before seeing returns</li>
-        <li>Ready to treat music as business</li>
-        </ul>
+        <h4>⚡ Accelerated Development Strategy</h4>
+        <p>This investment tier supports artists committed to rapid market establishment and professional-level growth velocity. 
+        Recommended for those viewing music as primary career focus with available capital for strategic deployment.</p>
         </div>
         """, unsafe_allow_html=True)
         
-        # Monthly Breakdown
+        # Comprehensive Budget Breakdown
         monthly_allocation = {
-            'Category': ['Paid Advertising', 'Content Production', 'Tools/Software', 'Playlist Pitching', 'Total'],
-            'Amount': ['£120', '£50', '£20', '£10', '£200'],
-            'Details': [
-                'Instagram/TikTok/YouTube ads',
-                'Better equipment, locations, collaborators',
-                'Paid scheduling, analytics tools',
-                'SubmitHub campaigns, curator outreach',
-                'Monthly total investment'
+            'Investment Category': ['Paid Advertising', 'Content Production', 'Professional Tools', 'Playlist Promotion', 'Monthly Total'],
+            'Allocation': ['£120', '£50', '£20', '£10', '£200'],
+            'Strategic Application': [
+                'Multi-platform advertising campaigns (Instagram, TikTok, YouTube, Facebook)',
+                'Enhanced production quality, location fees, collaboration investments',
+                'Premium scheduling platforms, advanced analytics, content creation tools',
+                'SubmitHub campaigns, curator outreach, professional pitching services',
+                'Comprehensive growth infrastructure investment'
+            ],
+            'Expected Impact': [
+                'Primary audience acquisition driver',
+                'Improved content quality and engagement',
+                'Operational efficiency and data insights',
+                'Playlist placement opportunities',
+                'Integrated growth ecosystem'
             ]
         }
         
@@ -2374,77 +2414,98 @@ elif section == "Budget Scenarios":
         
         st.markdown("---")
         
-        # ROI Analysis
+        # Performance Analysis
         col1, col2 = st.columns(2)
         
         with col1:
             st.markdown("""
-            **90-Day Investment: £600**
+            **90-Day Financial Overview:**
             
-            **Expected Returns:**
-            - **Followers:** 500-750 new
-            - **Listeners:** 250-375 new
-            - **Email:** 125-180 subscribers
-            - **Streams:** 25,000-37,500 additional
+            **Investment Summary:**
+            - Total Capital Deployed: £600
+            - Projected Streaming Revenue: £100-150
+            - Net Investment Position: -£450 to -£500
+            - Initial Financial ROI: -75% to -83%
             
-            **Monetary ROI:**
-            - Investment: £600
-            - Revenue: £100-150 (streaming)
-            - Net: -£450 to -£500
-            - ROI: -75% to -83%
+            **Expected Audience Development:**
+            - New Followers: 500-750 (aggregated)
+            - New Listeners: 250-375 (Spotify)
+            - Email Subscribers: 125-180
+            - Total Streams: 25,000-37,500 (additional)
+            - Market Impressions: 60,000-100,000+
             """)
         
         with col2:
             st.markdown("""
-            **Strategic ROI (What Matters):**
+            **Strategic Value Realization:**
             
-            **End of 90 Days:**
-            - Spotify: 250-375 monthly listeners
-            - Instagram: 530-780 followers
-            - TikTok: 500-750 followers
-            - Email: 125-180 subscribers
+            **Quarter-End Position (Day 90):**
+            - Spotify Monthly Listeners: 252-377
+            - Instagram Followers: 533-783
+            - TikTok Followers: 501-751
+            - Email Database: 125-180
             
-            **Career Milestones Achieved:**
-            1. Spotify algorithm fully engaged
-            2. Social proof established
-            3. Playlist curator attention
-            4. Collaboration requests incoming
-            5. Foundation for Year 2 growth
+            **Career Infrastructure Achieved:**
+            1. Spotify algorithm fully activated (Release Radar, Discover Weekly)
+            2. Social proof established across all platforms
+            3. Playlist curator recognition and consideration
+            4. Inbound collaboration opportunities
+            5. Foundation for exponential Year 2 growth
             
-            **Year 2 Potential:**
-            - 1,000-2,000 monthly listeners
-            - Music income starts covering costs
-            - Church booking opportunities
-            - Label/management interest
+            **Subsequent Year Potential:**
+            - Projected listeners: 1,000-2,000+
+            - Revenue begins offsetting marketing costs
+            - Church and event booking opportunities
+            - Industry attention (labels, management)
             """)
         
         st.markdown("""
         <div class="action-box">
-        <h4>🎯 When to Choose £200/Month Budget</h4>
-        <p><strong>Choose this if:</strong></p>
+        <h4>🎯 Investment Criteria & Application</h4>
+        <p><strong>This investment level is appropriate when:</strong></p>
         <ul>
-        <li>You're committed to music career (not hobby)</li>
-        <li>You have savings/income to invest</li>
-        <li>You're ready to work the system (1-2 hours/day)</li>
-        <li>You believe in your music's potential</li>
-        <li>You want to accelerate timeline (500 listeners in 90 days possible)</li>
+        <li><strong>Career Commitment:</strong> Music is primary professional focus, not secondary pursuit</li>
+        <li><strong>Financial Capacity:</strong> Available capital exists without impacting essential obligations</li>
+        <li><strong>Time Availability:</strong> 60-120 minutes daily for content creation and engagement</li>
+        <li><strong>Quality Confidence:</strong> Production quality warrants professional-level promotion</li>
+        <li><strong>Long-Term Perspective:</strong> Understanding that career development requires 18-36 month investment</li>
+        <li><strong>Strategic Readiness:</strong> Prepared to execute comprehensive growth systems consistently</li>
         </ul>
-        <p><strong>Warning:</strong> Only invest what you can afford to lose. Music career building takes 2-3 years minimum.</p>
+        <p><strong>Expected Timeline:</strong> Achievement of 500+ monthly listeners within 90 days becomes realistic target, 
+        accelerating overall career development by 6-9 months compared to organic approaches.</p>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        st.markdown("""
+        <div class="insight-box">
+        <h4>💡 Investment Philosophy</h4>
+        <p>Professional artist development requires strategic capital deployment before revenue generation. This investment tier 
+        reflects industry-standard approaches for independent artists building sustainable careers.</p>
+        <p><strong>Key Understanding:</strong> Initial negative financial ROI is expected and normal. Success metrics focus on 
+        audience development, platform positioning, and infrastructure creation that enable future monetization opportunities.</p>
+        <p><strong>Risk Management:</strong> Only deploy capital that can be allocated without financial stress. Artist development 
+        is a marathon, not a sprint. Sustainable investment over time yields better results than sporadic, unsustainable spending.</p>
         </div>
         """, unsafe_allow_html=True)
     
     st.markdown("---")
     
-    # Budget Comparison
-    st.subheader("📊 Budget Scenario Comparison")
+    # Comprehensive Comparison
+    st.subheader("📊 Investment Scenario Comparative Analysis")
     
     comparison_data = {
-        'Scenario': ['£0 (Organic)', '£50/Month', '£100/Month', '£200/Month'],
-        '90-Day Cost': ['£0', '£150', '£300', '£600'],
-        'Expected Listeners': ['50-100', '45-75', '120-180', '250-375'],
-        'Expected Followers': ['100-200', '90-150', '240-345', '500-750'],
-        'Time to 500 Listeners': ['6-12 months', '4-6 months', '3-4 months', '2-3 months'],
-        'Best For': ['Hobby/Ministry', 'Emerging Artist', 'Serious Artist', 'Career Investment']
+        'Investment Tier': ['Conservative Estimate', 'Entry Investment', 'Standard Investment', 'Growth Investment'],
+        '90-Day Investment': ['£0', '£150', '£300', '£600'],
+        'Projected Listeners': ['50-100', '45-75', '120-180', '250-375'],
+        'Projected Followers': ['100-200', '90-150', '240-345', '500-750'],
+        'Timeline to 500': ['6-12 months', '4-6 months', '3-4 months', '2-3 months'],
+        'Daily Time Required': ['90-120 min', '60-90 min', '60-90 min', '60-120 min'],
+        'Optimal Application': [
+            'Long-term community building',
+            'Emerging independent artists',
+            'Serious career development',
+            'Professional acceleration'
+        ]
     }
     
     df_comparison = pd.DataFrame(comparison_data)
@@ -2452,20 +2513,24 @@ elif section == "Budget Scenarios":
     
     st.markdown("""
     <div class="insight-box">
-    <h4>💡 Recommendation</h4>
-    <p><strong>For JohnGreat:</strong> Start with <strong>£50-100/month</strong> for first 90 days.</p>
-    <p><strong>Why:</strong></p>
+    <h4>💡 Strategic Recommendation</h4>
+    <p><strong>For JohnGreat's Current Position:</strong></p>
+    <p>Based on the audit findings, we recommend initiating with the <strong>Entry Investment (£50/month)</strong> 
+    or <strong>Standard Investment (£100/month)</strong> tier for the initial 90-day period.</p>
+    <p><strong>Rationale:</strong></p>
     <ol>
-    <li>Overcomes algorithm suppression (organic reach is dead for new accounts)</li>
-    <li>Builds momentum faster (encourages consistency)</li>
-    <li>Tests what works (which platforms/content convert best)</li>
-    <li>Accelerates learning curve (paid analytics provide better data)</li>
-    <li>Sets foundation for sustainable growth</li>
+    <li><strong>Algorithm Override:</strong> Organic reach constraints require paid amplification to achieve growth targets</li>
+    <li><strong>Quality Foundation:</strong> Professional content quality warrants strategic promotion investment</li>
+    <li><strong>Momentum Psychology:</strong> Visible growth supports consistent execution and team morale</li>
+    <li><strong>Competitive Positioning:</strong> Industry peers using paid promotion; organic-only approach creates disadvantage</li>
+    <li><strong>Timeline Optimization:</strong> Accelerates learning curve and reduces overall time-to-goal</li>
     </ol>
-    <p><strong>Minimum:</strong> £50/month. <strong>Optimal:</strong> £100/month. <strong>Aggressive:</strong> £200/month.</p>
+    <p><strong>Minimum Recommendation:</strong> £50/month | <strong>Optimal Recommendation:</strong> £100/month | 
+    <strong>Accelerated Option:</strong> £200/month</p>
+    <p><em>Note: All investment levels assume consistent execution of organic strategies including content creation, 
+    community engagement, and platform optimization.</em></p>
     </div>
     """, unsafe_allow_html=True)
-
 # ============================================
 # SECTION 9: EMAIL MARKETING
 # ============================================
