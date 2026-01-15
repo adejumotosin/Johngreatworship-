@@ -3435,6 +3435,878 @@ elif section == "Quick Wins":
     </div>
     """, unsafe_allow_html=True)
 
+# ============================================
+# SECTION: AGE TO AGE SINGLE LAUNCH CAMPAIGN
+# ============================================
+# Add "Age to Age Campaign" to the sidebar navigation options list
+# Then add this elif block after the existing sections
+
+elif section == "Age to Age Campaign":
+    st.header("🎵 'Age to Age' Single Launch Campaign")
+    
+    # Countdown Timer
+    launch_date = datetime(2026, 1, 18, 0, 0)
+    current_date = datetime.now()
+    days_until = (launch_date - current_date).days
+    hours_until = ((launch_date - current_date).seconds // 3600)
+    
+    col1, col2, col3, col4 = st.columns(4)
+    
+    with col1:
+        st.markdown(f'<div class="metric-card"><h2>{days_until}</h2><p>Days Until Launch</p></div>', unsafe_allow_html=True)
+    
+    with col2:
+        st.markdown(f'<div class="metric-card"><h2>{hours_until}</h2><p>Hours Remaining</p></div>', unsafe_allow_html=True)
+    
+    with col3:
+        st.markdown('<div class="metric-card"><h2>Jan 18</h2><p>Launch Date</p></div>', unsafe_allow_html=True)
+    
+    with col4:
+        st.markdown('<div class="metric-card"><h2>2026</h2><p>New Era</p></div>', unsafe_allow_html=True)
+    
+    st.markdown("""
+    <div class="success-box">
+    <h3>🚀 Campaign Mission: Transform Single Launch Into Growth Catalyst</h3>
+    <p><strong>Primary Objective:</strong> Achieve 500+ Day 1 streams and 100+ saves to trigger Spotify algorithm</p>
+    <p><strong>Secondary Objectives:</strong></p>
+    <ul>
+    <li>Build email list to 50+ subscribers before launch</li>
+    <li>Generate 50+ pre-saves on Spotify</li>
+    <li>Create viral moment on TikTok/Instagram (10K+ views on one piece)</li>
+    <li>Secure 2-3 playlist placements within first week</li>
+    </ul>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    st.markdown("---")
+    
+    # Campaign Timeline Tabs
+    campaign_tabs = st.tabs([
+        "📅 72-Hour Countdown",
+        "🎯 Launch Day Strategy", 
+        "📈 Week 1 Momentum",
+        "📱 Content Calendar",
+        "💰 Budget Allocation",
+        "📊 Success Metrics"
+    ])
+    
+    # 72-Hour Countdown Strategy
+    with campaign_tabs[0]:
+        st.subheader("72-Hour Pre-Launch Countdown Strategy")
+        
+        st.markdown("""
+        <div class="insight-box">
+        <h4>⏰ The Critical Window: January 15-17, 2026</h4>
+        <p>The 72 hours before launch are <strong>THE MOST IMPORTANT</strong> for campaign success. 
+        This period builds anticipation, captures pre-saves, and positions for Day 1 algorithm trigger.</p>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        # Hour-by-Hour Countdown Plan
+        countdown_tabs = st.tabs(["Day -3 (Jan 15)", "Day -2 (Jan 16)", "Day -1 (Jan 17)", "Launch Day (Jan 18)"])
+        
+        with countdown_tabs[0]:
+            st.markdown("""
+            **JANUARY 15, 2026 - DAY -3: "THE ANNOUNCEMENT"**
+            
+            **Morning (8:00 AM):**
+            
+            ✅ **Instagram Feed Post:**
+            ```
+            Caption:
+            "3 DAYS. 🕊️
+            
+            Something powerful is coming.
+            
+            'Age to Age' drops January 18th.
+            
+            This isn't just another song. This is a declaration 
+            of God's unchanging faithfulness across every generation.
+            
+            Pre-save link in bio 🔗
+            
+            Tag someone who needs to hear this.
+            
+            #AgeToAge #JohnGreat #NewMusic #GospelMusic #WorshipMusic"
+            ```
+            - Design: Campaign artwork with "3 DAYS" overlay
+            - Add countdown sticker
+            - Post to Instagram, Facebook, Twitter simultaneously
+            
+            **10:00 AM:**
+            
+            ✅ **TikTok Teaser #1:**
+            - 15-second emotional snippet
+            - Text overlay: "3 days until something changes"
+            - Use trending sound transition
+            - Hook: Show emotional moment from song
+            
+            **12:00 PM:**
+            
+            ✅ **YouTube Community Post:**
+            - Announce January 18 release
+            - Share pre-save link
+            - Poll: "What worship song topic do you need most right now?"
+            
+            **2:00 PM:**
+            
+            ✅ **Instagram Stories Series (5-7 slides):**
+            - Slide 1: "In 3 days..."
+            - Slide 2: Behind-the-scenes studio photo
+            - Slide 3: Lyrics snippet (blurred/teaser)
+            - Slide 4: "This song was written during..."
+            - Slide 5: Personal testimony about song's meaning
+            - Slide 6: Pre-save link sticker
+            - Slide 7: Countdown sticker + question box
+            
+            **4:00 PM:**
+            
+            ✅ **Facebook Groups Engagement:**
+            - Post in 3-5 gospel music groups:
+            ```
+            "Hi family! I'm dropping a new worship song on Saturday 
+            called 'Age to Age.' It's about God's faithfulness 
+            spanning generations. Would love your support on launch day! 
+            
+            Pre-save: [link]"
+            ```
+            
+            **6:00 PM:**
+            
+            ✅ **Twitter/X Thread:**
+            ```
+            THREAD: The story behind "Age to Age" 🧵
+            
+            1/ Three days from now, I'm releasing a song that's been 
+            on my heart for months.
+            
+            2/ "Age to Age" was written during a season when I questioned 
+            if God was still moving...
+            
+            [Continue personal story - 5-7 tweets]
+            
+            Final tweet: Pre-save here → [link]
+            #AgeToAge #NewMusicFriday
+            ```
+            
+            **8:00 PM:**
+            
+            ✅ **Instagram Reel:**
+            - 30-second worship moment
+            - Caption: "3 days until 'Age to Age'"
+            - Include audio snippet if possible
+            - CTA: "Pre-save in bio"
+            
+            **End of Day Checklist:**
+            - [ ] All platforms posted
+            - [ ] Pre-save link working
+            - [ ] Responded to all comments
+            - [ ] Engaged with 20 gospel artists' posts
+            - [ ] Email list opt-in form ready for tomorrow
+            """)
+        
+        with countdown_tabs[1]:
+            st.markdown("""
+            **JANUARY 16, 2026 - DAY -2: "THE BUILD-UP"**
+            
+            **Morning (8:00 AM):**
+            
+            ✅ **Instagram Countdown Post:**
+            ```
+            Caption:
+            "48 HOURS. ⏰
+            
+            Here's what 'Age to Age' is really about...
+            
+            [Share deeper meaning - 3-4 paragraphs about:
+            - Why you wrote it
+            - What God revealed
+            - Who it's for
+            - What you hope listeners experience]
+            
+            Pre-save before it's too late: [link in bio]
+            
+            Comment '🕊️' if you're ready.
+            
+            #AgeToAge #WorshipMusic #GospelArtist"
+            ```
+            - Design: Behind-the-scenes studio photo
+            - Carousel format (3-4 images)
+            
+            **10:00 AM:**
+            
+            ✅ **LAUNCH EMAIL LIST:**
+            - Create lead magnet: "Age to Age: The Story Behind the Song" PDF
+            - 5-page mini-ebook with:
+              * Full lyrics (exclusive early access)
+              * Personal testimony
+              * Scripture references
+              * Photos from recording session
+              * Listening guide/reflection questions
+            
+            **11:00 AM:**
+            
+            ✅ **Instagram Stories Takeover:**
+            - 10-15 slides throughout the day
+            - Behind-the-scenes content
+            - Studio footage
+            - Voice notes from songwriting process
+            - Every 3rd slide: Pre-save reminder
+            - Use interactive stickers (polls, questions, quizzes)
+            
+            **12:00 PM:**
+            
+            ✅ **TikTok Teaser #2:**
+            - "POV: You hear the song that changes your worship"
+            - Emotional reaction + snippet
+            - Text: "2 days until Age to Age"
+            - Duet invitation
+            
+            **2:00 PM:**
+            
+            ✅ **Facebook Live (15-20 minutes):**
+            - Title: "The Story Behind 'Age to Age' + Acoustic Preview"
+            - Play 30-60 second snippet on piano
+            - Share testimony
+            - Answer questions
+            - Give pre-save link multiple times
+            
+            **4:00 PM:**
+            
+            ✅ **YouTube Shorts:**
+            - Upload 3 shorts:
+              * Teaser 1: Emotional lyric moment
+              * Teaser 2: Piano performance snippet
+              * Teaser 3: "Why I wrote this song"
+            
+            **6:00 PM:**
+            
+            ✅ **Email Campaign #1 (If list started):**
+            ```
+            Subject: 48 hours until "Age to Age" 🕊️
+            
+            [Name],
+            
+            In 48 hours, everything changes.
+            
+            "Age to Age" drops Saturday, and I'm so excited to 
+            finally share this with you.
+            
+            [Personal story - 2-3 paragraphs]
+            
+            Here's your exclusive early access to the lyrics: [PDF download]
+            
+            And please, if this resonates with you, pre-save it now 
+            so you don't miss it: [Pre-save link]
+            
+            Blessings,
+            John
+            
+            P.S. Saturday morning, you'll be the first to know when it drops.
+            ```
+            
+            **8:00 PM:**
+            
+            ✅ **Instagram Reel - Collaboration Invitation:**
+            ```
+            Caption:
+            "Calling all worship leaders! 🎹
+            
+            'Age to Age' drops in 48 hours, and I'd love for you 
+            to be part of this movement.
+            
+            Will you:
+            ✅ Add it to your church worship set?
+            ✅ Share it with your congregation?
+            ✅ Create your own version?
+            
+            Let's spread this message together.
+            
+            Pre-save: [link in bio]"
+            ```
+            
+            **10:00 PM:**
+            
+            ✅ **Final Day -2 Push:**
+            - Respond to ALL comments
+            - Share user-generated content to Stories
+            - Engage with 30 gospel music posts
+            - DM 10 gospel artists: "New song Saturday, would love your support"
+            
+            **End of Day Checklist:**
+            - [ ] 20+ pre-saves secured
+            - [ ] 10+ email subscribers
+            - [ ] All content posted
+            - [ ] Collaborations reached out to
+            - [ ] Tomorrow's content prepped and scheduled
+            """)
+        
+        with countdown_tabs[2]:
+            st.markdown("""
+            **JANUARY 17, 2026 - DAY -1: "THE FINAL PUSH"**
+            
+            **Morning (7:00 AM):**
+            
+            ✅ **Instagram Stories - "24 Hours" Announcement:**
+            - Countdown sticker
+            - "Tomorrow morning at midnight"
+            - Build anticipation
+            
+            **8:00 AM:**
+            
+            ✅ **All Platforms Simultaneous Post:**
+            ```
+            Caption:
+            "24 HOURS. 🔥
+            
+            Tomorrow. Midnight. Age to Age.
+            
+            This is your last chance to pre-save and be part of 
+            the Day 1 movement.
+            
+            Here's what happens when you pre-save:
+            ✅ Song automatically added to your library at midnight
+            ✅ You support an independent gospel artist
+            ✅ You help trigger the Spotify algorithm
+            ✅ You're part of something bigger than just music
+            
+            Link in bio. Let's make history tomorrow.
+            
+            Drop a '🕊️' if you're in.
+            
+            #AgeToAge #TomorrowNight #NewMusic"
+            ```
+            
+            **10:00 AM - 6:00 PM: CONTENT BLITZ**
+            
+            ✅ **Instagram Stories (Every 2 hours):**
+            - 10:00 AM: "24 hours to go"
+            - 12:00 PM: Lyrics snippet #1
+            - 2:00 PM: "18 hours to go"
+            - 4:00 PM: Lyrics snippet #2
+            - 6:00 PM: "12 hours to midnight"
+            
+            ✅ **TikTok Marathon (Post 3-5 videos throughout day):**
+            - Video 1: "24 hours until the song that changed my life drops"
+            - Video 2: Trending sound with "Age to Age" twist
+            - Video 3: "POV: You pre-saved Age to Age"
+            - Video 4: Behind-the-scenes montage
+            - Video 5: Final countdown emotional moment
+            
+            ✅ **Twitter Engagement Spree:**
+            - Quote tweet gospel artists
+            - Reply to trending #GospelMusic tweets
+            - Share countdown updates
+            - Build community excitement
+            
+            **12:00 PM:**
+            
+            ✅ **Email Campaign #2:**
+            ```
+            Subject: TONIGHT at midnight ⏰
+            
+            [Name],
+            
+            12 hours.
+            
+            That's all that stands between us and "Age to Age."
+            
+            I've poured my heart into this song, and I can't 
+            wait for you to experience it.
+            
+            Set your alarm. Midnight tonight.
+            
+            Or better yet, pre-save it now and it'll be waiting 
+            for you when you wake up: [Pre-save link]
+            
+            Tomorrow, I'm going to email you the exclusive 
+            behind-the-scenes video.
+            
+            Get ready.
+            
+            John
+            ```
+            
+            **3:00 PM:**
+            
+            ✅ **YouTube Premier Setup:**
+            - Upload music video (if available)
+            - Schedule premiere for 12:01 AM January 18
+            - Create event
+            - Share premiere link
+            
+            **6:00 PM:**
+            
+            ✅ **Instagram Live - "6 Hours Until Midnight":**
+            - 20-30 minute session
+            - Answer questions
+            - Share final thoughts
+            - Acoustic moment
+            - Build community
+            - Remind about pre-save
+            
+            **8:00 PM:**
+            
+            ✅ **Facebook & Instagram Post:**
+            ```
+            "4 HOURS UNTIL MIDNIGHT.
+            
+            I'm not sleeping tonight. Are you?
+            
+            'Age to Age' drops at 12:01 AM.
+            
+            Final call for pre-saves: [link]
+            
+            See you at midnight. 🕊️"
+            ```
+            
+            **9:00 PM - 11:59 PM: COUNTDOWN STORIES**
+            
+            ✅ **Instagram Stories Every Hour:**
+            - 9:00 PM: "3 hours"
+            - 10:00 PM: "2 hours" + final testimony
+            - 11:00 PM: "1 hour" + worship moment
+            - 11:30 PM: "30 minutes"
+            - 11:45 PM: "15 minutes" + prayer
+            - 11:55 PM: "5 minutes" + emotional message
+            
+            **11:59 PM:**
+            
+            ✅ **LAUNCH PREPARATION:**
+            - All streaming links ready
+            - Linktree updated
+            - Posts scheduled for 12:01 AM
+            - Email ready to send
+            - Story content prepared
+            
+            **End of Day -1 Checklist:**
+            - [ ] 50+ pre-saves achieved
+            - [ ] 30+ email subscribers
+            - [ ] All launch day content prepared
+            - [ ] YouTube premiere set
+            - [ ] Community fully engaged
+            - [ ] Ready for midnight launch
+            """)
+        
+        with countdown_tabs[3]:
+            st.markdown("""
+            **JANUARY 18, 2026 - LAUNCH DAY: "THE EXPLOSION"**
+            
+            **MIDNIGHT (12:01 AM):**
+            
+            🚀 **SIMULTANEOUS MULTI-PLATFORM LAUNCH:**
+            
+            ✅ **Instagram Feed Post:**
+            ```
+            Caption:
+            "IT'S HERE. 🕊️
+            
+            'Age to Age' is NOW AVAILABLE everywhere.
+            
+            From generation to generation, God's faithfulness never changes.
+            
+            This song is my testimony. My declaration. My worship.
+            
+            Now it's yours.
+            
+            🎧 STREAM NOW:
+            Spotify: [link]
+            Apple Music: [link]
+            YouTube Music: [link]
+            All platforms: [Linktree]
+            
+            What you can do RIGHT NOW:
+            ✅ Stream it
+            ✅ Save it
+            ✅ Add to your playlist
+            ✅ Share with ONE person
+            
+            Let's make this moment count.
+            
+            #AgeToAge #OutNow #NewMusicFriday #JohnGreat #GospelMusic"
+            ```
+            - Multiple images: Cover art, lyrics, behind-the-scenes
+            
+            ✅ **Instagram Stories (10-slide series):**
+            - Slide 1: "IT'S OUT"
+            - Slide 2: Cover art reveal
+            - Slide 3: "Stream now" with swipe-up
+            - Slide 4-6: Key lyrics
+            - Slide 7: Personal message
+            - Slide 8: "Save it to your library"
+            - Slide 9: "Share with one person"
+            - Slide 10: All streaming links
+            
+            ✅ **Email Blast:**
+            ```
+            Subject: IT'S HERE! "Age to Age" is LIVE 🎵
+            
+            [Name],
+            
+            WE DID IT.
+            
+            "Age to Age" is officially out RIGHT NOW.
+            
+            Stream it here: [All platforms]
+            
+            And here's what I promised - the exclusive behind-the-scenes 
+            video of the making of this song: [Private YouTube link]
+            
+            I need your help TODAY:
+            1. Stream the song
+            2. Save it to your library (helps Spotify algorithm)
+            3. Add it to a playlist
+            4. Share with ONE person
+            
+            Every stream in the first 24 hours matters.
+            
+            Thank you for being here from the beginning.
+            
+            Let's change lives with this music.
+            
+            John
+            
+            P.S. Reply and tell me what you think!
+            ```
+            
+            ✅ **TikTok Launch Video:**
+            - "It's out. Right now. Age to Age."
+            - Emotional moment
+            - Link in bio
+            - Duet challenge invitation
+            
+            ✅ **Twitter Launch Thread:**
+            ```
+            IT'S HERE.
+            
+            After months of work, prayers, late nights, and faith...
+            
+            "Age to Age" is officially available everywhere.
+            
+            [Thread with story, links, call to action]
+            
+            #AgeToAge #NewMusicFriday
+            ```
+            
+            ✅ **YouTube Premiere (If Video Ready):**
+            - Start 12:01 AM premiere
+            - Be in chat
+            - Engage with viewers
+            
+            ✅ **Facebook Page & Groups:**
+            - Post to page
+            - Share in 3-5 gospel music groups
+            - Personal profile update
+            
+            **MORNING (6:00 AM - 12:00 PM):**
+            
+            ✅ **Instagram Stories Update Series:**
+            - Thank you message
+            - Early stream count (if significant)
+            - User reactions/screenshots
+            - Keep momentum going
+            
+            ✅ **Respond to EVERY Comment:**
+            - Instagram
+            - Facebook
+            - Twitter
+            - YouTube
+            - TikTok
+            - Engagement = algorithm boost
+            
+            ✅ **TikTok Video #2:**
+            - "Reacting to your reactions to Age to Age"
+            - Show genuine user comments
+            - Build community
+            
+            **AFTERNOON (12:00 PM - 6:00 PM):**
+            
+            ✅ **Instagram Reel - Lyrics Video:**
+            - Create beautiful lyrics video
+            - 30-60 seconds
+            - "Favorite line from Age to Age"
+            - Encourage comments with their favorite line
+            
+            ✅ **Facebook/Instagram Live (2:00 PM):**
+            - "Thank You + Acoustic Performance"
+            - 20-30 minutes
+            - Perform "Age to Age" live
+            - Answer questions
+            - Express gratitude
+            - Remind to stream/save
+            
+            ✅ **Email Update:**
+            ```
+            Subject: You're making this happen 🙏
+            
+            [Name],
+            
+            I'm blown away.
+            
+            [Current stream count] streams in the first [X] hours.
+            
+            This is because of YOU.
+            
+            If you haven't streamed yet, now's the time.
+            If you have, stream it again.
+            
+            Let's hit [goal number] by midnight.
+            
+            [Progress update, encouragement]
+            
+            John
+            ```
+            
+            **EVENING (6:00 PM - Midnight):**
+            
+            ✅ **Instagram Stories Countdown to 24 Hours:**
+            - "12 hours since launch"
+            - Stream count update
+            - User-generated content
+            - Keep energy high
+            
+            ✅ **TikTok Video #3:**
+            - Day-in-the-life on launch day
+            - Show the journey
+            - Authentic, emotional
+            
+            ✅ **Twitter Engagement:**
+            - Thank supporters
+            - Share milestones
+            - Retweet fan reactions
+            - Build community momentum
+            
+            ✅ **Final Push (10:00 PM):**
+            ```
+            Instagram Post:
+            "2 hours until Day 1 ends.
+            
+            We're at [X] streams.
+            
+            Can we hit [goal]?
+            
+            One more stream. One more save. One more share.
+            
+            Let's finish strong.
+            
+            Link in bio. Go. 🕊️"
+            ```
+            
+            **End of Launch Day Checklist:**
+            - [ ] 500+ streams achieved
+            - [ ] 100+ saves
+            - [ ] All platforms posted
+            - [ ] Community fully engaged
+            - [ ] Every comment responded to
+            - [ ] Week 1 content prepared
+            - [ ] Celebrate the milestone!
+            """)
+    
+    # Launch Day Strategy
+    with campaign_tabs[1]:
+        st.subheader("🎯 Launch Day Hour-by-Hour Execution Plan")
+        
+        st.markdown("""
+        <div class="action-box">
+        <h4>⚡ Launch Day Mission: Trigger the Algorithm</h4>
+        <p><strong>Why First 24 Hours Matter:</strong></p>
+        <ul>
+        <li><strong>Spotify Algorithm:</strong> 500+ Day 1 streams triggers "Release Radar" inclusion</li>
+        <li><strong>100+ Saves:</strong> Signals strong engagement, increases "Discover Weekly" chances</li>
+        <li><strong>Social Proof:</strong> High Day 1 numbers attract playlist curators</li>
+        <li><strong>Momentum:</strong> Strong start = easier Week 2-4 growth</li>
+        </ul>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        # Hour-by-hour breakdown chart
+        hourly_data = {
+            'Time Block': [
+                '12:00 AM - 6:00 AM',
+                '6:00 AM - 9:00 AM',
+                '9:00 AM - 12:00 PM',
+                '12:00 PM - 3:00 PM',
+                '3:00 PM - 6:00 PM',
+                '6:00 PM - 9:00 PM',
+                '9:00 PM - 12:00 AM'
+            ],
+            'Key Actions': [
+                'Launch on all platforms, email blast, Stories blitz',
+                'Morning engagement, respond to comments, TikTok post',
+                'Instagram Reel, community engagement, track metrics',
+                'Facebook Live performance, email update, playlist pitching',
+                'User-generated content sharing, continued engagement',
+                'Evening push, milestone celebration, final content push',
+                'Final countdown to 24hrs, thank supporters, prep Week 1'
+            ],
+            'Target Streams': [
+                '50-100',
+                '100-150',
+                '150-250',
+                '250-350',
+                '350-450',
+                '450-550',
+                '500-600'
+            ],
+            'Priority': [
+                'Critical',
+                'High',
+                'High',
+                'High',
+                'Medium',
+                'Medium',
+                'High'
+            ]
+        }
+        
+        df_hourly = pd.DataFrame(hourly_data)
+        st.dataframe(df_hourly, use_container_width=True, hide_index=True)
+        
+        st.markdown("---")
+        
+        # Stream Growth Visualization
+        hours = list(range(0, 25, 3))
+        min_streams = [0, 50, 150, 300, 450, 550, 650, 750, 850]
+        max_streams = [0, 100, 250, 450, 650, 850, 1050, 1250, 1500]
+        target_line = [500] * len(hours)
+        
+        fig = go.Figure()
+        
+        fig.add_trace(go.Scatter(
+            x=hours,
+            y=min_streams,
+            mode='lines',
+            name='Conservative',
+            line=dict(color='#D4A574', width=2),
+            fill=None
+        ))
+        
+        fig.add_trace(go.Scatter(
+            x=hours,
+            y=max_streams,
+            mode='lines',
+            name='Optimistic',
+            line=dict(color='#8B4789', width=2),
+            fill='tonexty',
+            fillcolor='rgba(139, 71, 137, 0.2)'
+        ))
+        
+        fig.add_trace(go.Scatter(
+            x=hours,
+            y=target_line,
+            mode='lines',
+            name='Target (500 streams)',
+            line=dict(color='#28a745', width=3, dash='dash')
+        ))
+        
+        fig.update_layout(
+            title="Launch Day Stream Projection (24 Hours)",
+            xaxis_title="Hours Since Launch",
+            yaxis_title="Cumulative Streams",
+            height=400,
+            hovermode='x unified'
+        )
+        
+        st.plotly_chart(fig, use_container_width=True)
+        
+        st.markdown("""
+        <div class="insight-box">
+        <h4>💡 What Drives Day 1 Success</h4>
+        <p><strong>Stream Sources (Target Mix):</strong></p>
+        <ul>
+        <li><strong>Email List (30%):</strong> 50+ subscribers × 30% open × 50% stream = 8-15 streams</li>
+        <li><strong>Pre-Saves (40%):</strong> 50+ pre-saves × 80% auto-play = 40+ streams</li>
+        <li><strong>Social Media (20%):</strong> Instagram/TikTok/Facebook posts = 100-200 streams</li>
+        <li><strong>Word of Mouth (10%):</strong> Shares, DMs, organic discovery = 50-100 streams</li>
+        </ul>
+        <p><strong>Success Formula:</strong> Pre-saves + Email + Social momentum = Algorithm trigger</p>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    # Week 1 Momentum
+    with campaign_tabs[2]:
+        st.subheader("📈 Week 1 Post-Launch Momentum Strategy")
+        
+        st.markdown("""
+        <div class="success-box">
+        <h4>🎯 Week 1 Mission: Sustain & Amplify</h4>
+        <p><strong>Goal:</strong> Maintain streaming velocity and expand reach beyond Day 1 audience</p>
+        <p><strong>Target:</strong> 2,000+ total streams by Day 7 (average 285/day after Day 1)</p>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        # Day-by-day Week 1 plan
+        week1_data = {
+            'Day': ['Day 2 (Jan 19)', 'Day 3 (Jan 20)', 'Day 4 (Jan 21)', 'Day 5 (Jan 22)', 'Day 6 (Jan 23)', 'Day 7 (Jan 24)'],
+            'Content Focus': [
+                'Thank you + behind-the-scenes',
+                'User testimonies + lyric focus',
+                'Collaboration announcements',
+                'Playlist update + milestone celebration',
+                'Acoustic/alternate version',
+                'Week 1 recap + Week 2 preview'
+            ],
+            'Platform Priority': [
+                'Instagram Stories + Email',
+                'TikTok + Instagram Reels',
+                'All platforms',
+                'Email + Twitter',
+                'YouTube + Instagram',
+                'All platforms recap'
+            ],
+            'Stream Target': [
+                '200-300',
+                '150-250',
+                '150-200',
+                '100-150',
+                '100-150',
+                '150-200'
+            ]
+        }
+        
+        df_week1 = pd.DataFrame(week1_data)
+        st.dataframe(df_week1, use_container_width=True, hide_index=True)
+        
+        st.markdown("---")
+        
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            st.markdown("""
+            **Content Pillars for Week 1:**
+            
+            **1. Gratitude & Connection (30%)**
+            - Thank you messages
+            - User-generated content shares
+            - Comment responses
+            - Community building
+            
+            **2. Educational/Value (30%)**
+            - Song meaning deep-dive
+            - Lyrics breakdown
+            - Scripture connections
+            - Worship application
+            
+            **3. Behind-the-Scenes (20%)**
+            - Studio footage
+            - Songwriting process
+            - Production details
+            - Personal stories
+            
+            **4. Calls-to-Action (20%)**
+            - Playlist additions
+            - Social sharing
+            - Testimony requests
+            - Continued streaming
+            """)
+        
+        with col2:
+            st.markdown("""
+            **Week 1 Paid Promotion (If Budget Available):**
+            
+            **£50-100 Recommended Allocation:**
+            
+            **Instagram/Facebook Ads (£40-60)
 # Footer
 st.markdown("---")
 st.markdown("**Strategic Audit & Growth Plan** • Prepared by Oluwatosin Adejumo • © 2026")
