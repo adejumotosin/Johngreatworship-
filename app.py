@@ -2318,7 +2318,7 @@ elif section == "Budget Scenarios":
         
         # Budget Allocation Visualization
         labels = ['Instagram Advertising', 'TikTok Promotion', 'YouTube Advertising', 'Retargeting Campaigns']
-        values = [40, 30, 20, 10]
+        values = [30, 30, 30, 10]
         
         fig = go.Figure(data=[go.Pie(
             labels=labels,
@@ -2342,7 +2342,7 @@ elif section == "Budget Scenarios":
         # Detailed Channel Performance
         results_data = {
             'Marketing Channel': ['Instagram', 'TikTok', 'YouTube', 'Retargeting', 'Combined Total'],
-            'Budget': ['£40', '£30', '£20', '£10', '£100'],
+            'Budget': ['£30', '£30', '£30', '£10', '£100'],
             'Projected Impressions': ['2,000-3,000', '5,000-10,000', '1,000-2,000', '500-1,000', '8,500-16,000'],
             'Profile Visits': ['80-120', '150-250', '30-50', '20-30', '280-450'],
             'New Followers': ['30-40', '40-60', '10-15', '5-10', '85-125'],
