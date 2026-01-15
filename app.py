@@ -89,8 +89,7 @@ section = st.sidebar.radio(
         "Content Strategy",
         "Budget Scenarios",
         "Email Marketing",
-        "Quick Wins"
-
+        "Quick Wins",
         "Age to Age Campaign"
     ]
 )
