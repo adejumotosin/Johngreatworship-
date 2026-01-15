@@ -74,9 +74,14 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# Sidebar navigation
-st.sidebar.title("🎵 Navigation")
-st.sidebar.markdown("**JohnGreat Music Audit**")
+# Sidebar navigation with Purple Crayola branding
+st.sidebar.image("purple_crayola_logo.png", width=200)
+st.sidebar.markdown("""
+    <div style="text-align: center; margin-bottom: 2rem;">
+        <h2 style="color: #7B2FBE; margin: 0;">Purple Crayola</h2>
+        <p style="color: #666; font-size: 0.9rem; margin-top: 0.5rem;">JohnGreat Music Audit</p>
+    </div>
+""", unsafe_allow_html=True)
 section = st.sidebar.radio(
     "Go to:",
     [
@@ -93,7 +98,6 @@ section = st.sidebar.radio(
         "Age to Age Campaign"
     ]
 )
-
 # Header
 st.markdown('<div class="main-header">🎵 JohnGreat Music</div>', unsafe_allow_html=True)
 st.markdown('<div class="sub-header">Strategic Social Media & Streaming Audit | 90-Day Growth Plan</div>', unsafe_allow_html=True)
